@@ -1,0 +1,10 @@
+<%- include("partials/header.ejs") -%>
+
+<%   postglobaldatas.forEach((element)=>{  %>
+ 
+     <h1> <%= element.posttitle %></h1>
+     <p class="content">  <%= element.postbody.substring(0,100)+"......" %> <a class="btn btn-primary" href="post/<%= element.posttitle %>">Read more</a></p>
+
+<%  }) %>
+
+<%- include("partials/footer.ejs") -%>
